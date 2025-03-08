@@ -63,5 +63,5 @@ pip install -r requirements.txt
 ```bash
 python flight_model.py
 ```
-🔗 GitHub: nishu-2004(https://github.com/nishu-2004)  
+ GitHub: nishu-2004(https://github.com/nishu-2004)  
 
