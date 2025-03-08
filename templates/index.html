@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Price Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .prediction-text {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Flight Price Prediction</h1>
+        <form action="/predict" method="POST">
+            <label for="airline">Airline:</label>
+            <input type="text" id="airline" name="airline" required>
+
+            <label for="flight">Flight Number:</label>
+            <input type="text" id="flight" name="flight" required>
+
+            <label for="source_city">Source City:</label>
+            <input type="text" id="source_city" name="source_city" required>
+
+            <label for="departure_time">Departure Time:</label>
+            <select id="departure_time" name="departure_time" required>
+                <option value="Early_Morning">Early Morning</option>
+                <option value="Morning">Morning</option>
+                <option value="Afternoon">Afternoon</option>
+                <option value="Evening">Evening</option>
+                <option value="Night">Night</option>
+                <option value="Late_Night">Late Night</option>
+            </select>
+
+            <label for="stops">Stops:</label>
+            <select id="stops" name="stops" required>
+                <option value="zero">0</option>
+                <option value="one">1</option>
+                <option value="two_or_more">2 or more</option>
+            </select>
+
+            <label for="arrival_time">Arrival Time:</label>
+            <select id="arrival_time" name="arrival_time" required>
+                <option value="Early_Morning">Early Morning</option>
+                <option value="Morning">Morning</option>
+                <option value="Afternoon">Afternoon</option>
+                <option value="Evening">Evening</option>
+                <option value="Night">Night</option>
+                <option value="Late_Night">Late Night</option>
+            </select>
+
+            <label for="destination_city">Destination City:</label>
+            <input type="text" id="destination_city" name="destination_city" required>
+
+            <label for="class">Class:</label>
+            <select id="class" name="class" required>
+                <option value="Economy">Economy</option>
+                <option value="Business">Business</option>
+            </select>
+
+            <label for="duration">Duration (hours):</label>
+            <input type="text" id="duration" name="duration" required>
+
+            <label for="days_left">Days Left:</label>
+            <input type="text" id="days_left" name="days_left" required>
+
+            <input type="submit" value="Predict">
+        </form>
+
+        {% if prediction_text %}
+            <div class="prediction-text">
+                {{ prediction_text }}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
