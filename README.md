@@ -34,7 +34,7 @@ These features help predict **ticket prices** accurately.
 ##  Results  
 
 🔹 **MAE (Log-Transformed Scale):** 0.1372  
-🔹 **MAE (Original Scale):** $2322.08  
+🔹 **MAE (Original Scale):** 2322.08  
 
 ---
 
