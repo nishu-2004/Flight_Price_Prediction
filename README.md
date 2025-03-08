@@ -1,6 +1,6 @@
 ---
 
-# ✈️ Flight Price Prediction using ANN  
+#  Flight Price Prediction using ANN  
 
 This project predicts flight ticket prices using an **Artificial Neural Network (ANN)**. The model is trained on a dataset containing flight details such as airline, source, destination, duration, and date of journey.  
 
