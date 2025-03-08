@@ -22,7 +22,7 @@ These features help predict **ticket prices** accurately.
 
 ---
 
-## ⚙ Methodology  
+##  Methodology  
 
 🔹 **Data Preprocessing** – Handling missing values, feature encoding, and normalization.  
 🔹 **Feature Engineering** – Extracting relevant information like day, month, and total stops.  
@@ -38,7 +38,7 @@ These features help predict **ticket prices** accurately.
 
 ---
 
-## 🛠 Technologies Used  
+##  Technologies Used  
 
 - **Python**  
 - **TensorFlow/Keras**  
@@ -61,10 +61,7 @@ pip install -r requirements.txt
 
 ### Train the model  
 ```bash
-python train.py
+python flight_model.py
 ```
-🔗 GitHub: [yourusername](https://github.com/yourusername)  
+🔗 GitHub: nishu-2004(https://github.com/nishu-2004)  
 
----
-
-🔥 Hope this helps! Let me know if you need any edits! 🚀
